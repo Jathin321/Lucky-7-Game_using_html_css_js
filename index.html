@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucky 7</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container border border-light mt-4" style="height: 60px; border-radius: 15px; display: flex;">
+        <div class="container mx-2 fs-3 mt-1 text-light" style="width: 150px;">History:</div>
+        <div class="d-flex flex-row" style="overflow-x: scroll; overflow-y: hidden;" id="hiscon">  
+            <!-- <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div> 
+            <div class="container border border-light text-light text-center mx-2 px-5" style="border-radius: 15px; margin-top: 13px;">8</div>  -->
+        </div>
+    </div>
+
+
+    <div class="container bg-transparent mt-3" style="height: 550px;">
+        <div class="row" style="height: 530px;">
+            <div class="col-sm mt-3 border mx-3" id="1-6-outer" class="bg-transparent" style="border-radius: 50px;"
+                onclick="makeGuess(1)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col bg-transparent" style="height: 350px;" id="1-6-win">
+                            <div id="1-6" class="text-light"
+                                style="margin-top: 190px; margin-left: 125px; font-size: 60px;">1-6</div>
+                            <!-- <div class="text-primary bg-transparent fs-1" style="margin-left: 110px; margin-top: 20px;">Winner</div> -->
+                        </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="col bg-transparent" style="height: 200px;">
+                            <button type="button" class="btn btn-info"
+                                style="margin-left: 110px; margin-top: 130px;">Amount : <span id="bettingAmount1">
+                                    ₹0</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm bg-light mt-3 mx-1 bg-transparent">
+                <div class="">
+                    <div class="row">
+                        <div class="col bg-light mb-3" style="height: 250px; border-radius: 50px;">
+                            <div class="container mt-5">
+                                <div class="row py-3 my-2 mt-2">
+                                    <!-- <div class="col-lg-5 col-md-5 col-sm-10 col-12 mx-auto"> -->
+                                    <!-- <div class="card rounded-0"> -->
+                                    <!-- <div class="card-body"> -->
+                                    <!-- <div class="container-fluid"> -->
+                                    <div class="d-flex justify-content-evenly">
+                                        <div class="dice-container mx-2">
+                                            <div class="dice" id="dice-1" data-face="2">
+                                                <div class="dice-face" data-face="1">
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="2">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="3">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="4">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="5">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="6">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="dice-container">
+                                            <div class="dice" id="dice-2" data-face="3">
+                                                <div class="dice-face" data-face="1">
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="2">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="3">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="4">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="5">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                                <div class="dice-face" data-face="6">
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                    <span class="dot"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- </div> -->
+                                    <!-- </div> -->
+                                    <!-- </div> -->
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="col border" id="777-outer" style="height: 250px; border-radius: 50px;"
+                            onclick="makeGuess(2)">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col bg-transparent" style="height: 140px;">
+                                        <div class="text-light" id="777"
+                                            style="font-size: 100px; margin-left: 90px; margin-top: 20px;">777</div>
+                                    </div>
+
+                                    <div class="w-100"></div>
+
+                                    <div class="col bg-transparent" style="height: 100px;" id="777-win">
+                                        <!-- <div class="text-primary bg-light fs-2" style="margin: 0px 0px 0px 120px; padding: 0px">Winner</div> -->
+                                        <button type="button" class="btn btn-info"
+                                            style="margin-left: 110px; margin-top: 20px;">Amount : <span
+                                                id="bettingAmount2"> ₹0</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mt-3 border mx-3" id="8-12-outer" style="border-radius: 50px;" onclick="makeGuess(3)">
+                <div class="container">
+                    <div class="row">
+                        <div class="col bg-transparent" style="height: 350px;" id="8-12-win">
+                            <div id="8-12" class="text-light"
+                                style="margin-top: 200px; margin-left: 100px; font-size: 60px;">8-12</div>
+                        </div>
+
+                        <div class="w-100"></div>
+
+                        <div class="col bg-transparent" style="height: 200px;">
+                            <button type="button" class="btn btn-info"
+                                style="margin-left: 110px; margin-top: 130px;">Amount : <span id="bettingAmount3">
+                                    ₹0</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- last div -->
+    <div class="container bg-transparent mt-3" style="height: 80px;">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-primary rounded-pill w-100 mt-3" id="rollButton">
+                        Roll Dice
+                    </button>
+                </div>
+
+                <div class="col-6 mt-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                                <button onclick="addMoney(10)" type="button" class="btn btn-outline-light">₹10 </button>
+                            </div>
+                            <div class="col-sm">
+                                <button onclick="addMoney(50)" type="button" class="btn btn-outline-light">₹50 </button>
+                            </div>
+                            <div class="col-sm">
+                                <button onclick="addMoney(100)" type="button"
+                                    class="btn btn-outline-light">₹100</button>
+                            </div>
+                            <div class="col-sm">
+                                <button onclick="addMoney(200)" type="button"
+                                    class="btn btn-outline-light">₹200</button>
+                            </div>
+                            <div class="col-sm">
+                                <button onclick="addMoney(500)" type="button"
+                                    class="btn btn-outline-light">₹500</button>
+                            </div>
+                            <div class="col-sm">
+                                <button onclick="addMoney(1000)" type="button"
+                                    class="btn btn-outline-light">₹1000</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <button type="button" class="btn btn-primary rounded-pill w-100 mt-3" id="rollButton">
+                        Balance : <span id="balanceAmount">500</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="w-25">
+                <button type="button" class="btn btn-primary rounded-pill w-100 mt-3" id="rollButton">
+                    Roll Dice
+                </button>
+            </div>
+            <div class="bg-success" style="height: 50px;">hello world</div>
+        </div> -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
